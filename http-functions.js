@@ -5,7 +5,7 @@ var options = {
   path: '/http-examples/step4.html'
 };
 
-function getHtml(options, callback) {
+module.exports = function getHtml(options, callback) {
   https.get(options, function(response){
     response.setEncoding('utf-8');
 
@@ -24,4 +24,4 @@ function printHTML(html) {
   console.log(html);
 }
 
-getHtml(options, printHTML)
+
